@@ -1,0 +1,16 @@
+{
+    "name": "ZAMB.Debugging",
+    "rootNamespace": "ZAMB.Debugging",
+    "references": [
+        "GUID:9f985160704b00044a4f7715794f9077"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
