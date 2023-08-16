@@ -29,7 +29,11 @@ namespace ZAMB.PlayerScripts.PlayerController
             CurrentState.EnterState();
         }
 
-        private void OnDisable() => controls.Disable();
+        private void OnDisable()
+        {
+            CurrentState.ExitState();
+            controls.Disable();
+        }
 
         private void FixedUpdate()
         {
