@@ -15,8 +15,9 @@ MonoBehaviour:
   <Standard>k__BackingField:
     <SlowWalkSpeed>k__BackingField: 3
     <FastWalkSpeed>k__BackingField: 7
-    <VelocityLerpT>k__BackingField: 0.4
-    <TurnSmoothTime>k__BackingField: 0.1
     <AnimationDampTime>k__BackingField: 0.1
-    <MaxSlopeAngle>k__BackingField: 46
-  <GravityForce>k__BackingField: 0
+  <Jumping>k__BackingField:
+    <JumpForce>k__BackingField: 0.4
+    <JumpSpeed>k__BackingField: 3
+  <GravityForce>k__BackingField: -1
+  <TurnTime>k__BackingField: 0.1

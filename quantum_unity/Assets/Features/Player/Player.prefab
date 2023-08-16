@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
+  m_BindingMode: 4
   m_FollowOffset: {x: 0, y: 1.2, z: -4}
   m_XDamping: 1
   m_YDamping: 1
@@ -151,7 +151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558165127146454767}
-  m_LocalRotation: {x: -0.012497069, y: 0.000000017205037, z: 2.1502933e-10, w: 0.9999219}
+  m_LocalRotation: {x: -0.01249705, y: -0.000000017205045, z: -2.1502909e-10, w: 0.9999219}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -319,7 +319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &825277441372480059
 Transform:
   m_ObjectHideFlags: 0
@@ -394,7 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
+  m_BindingMode: 4
   m_FollowOffset: {x: 0, y: 1.2, z: -4}
   m_XDamping: 1
   m_YDamping: 1
@@ -583,7 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
+  m_BindingMode: 4
   m_FollowOffset: {x: 0, y: 1.2, z: -4}
   m_XDamping: 1
   m_YDamping: 0
@@ -745,7 +745,7 @@ MonoBehaviour:
       m_LegacyHeadingDefinition: -1
       m_LegacyVelocityFilterStrength: -1
   m_YAxisRecentering:
-    m_enabled: 0
+    m_enabled: 1
     m_WaitTime: 1
     m_RecenteringTime: 2
     m_LegacyHeadingDefinition: -1
@@ -778,7 +778,7 @@ MonoBehaviour:
     m_RecenteringTime: 2
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
-  m_BindingMode: 1
+  m_BindingMode: 4
   m_SplineCurvature: 0.2
   m_Orbits:
   - m_Height: 2
@@ -894,7 +894,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4291837058840834887}
-  m_LocalRotation: {x: -0.04881093, y: -0.000000002148234, z: -1.0498244e-10, w: 0.998808}
+  m_LocalRotation: {x: -0.04881093, y: -0.0000000021482385, z: -1.04982655e-10, w: 0.998808}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1293,7 +1293,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6568487496249364756}
-  m_LocalRotation: {x: -0.012497069, y: 0.000000017205037, z: 2.1502933e-10, w: 0.9999219}
+  m_LocalRotation: {x: -0.012497068, y: -0.000000016881486, z: -2.1098555e-10, w: 0.9999219}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1906,12 +1906,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 0b2988702536e5d41a667789743f9d37,
         type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'spine.001'\n\tTransform 'spine'\n\tTransform
-        'forearm.R'\n\tTransform 'upper_arm.R'\n\tTransform 'hand.R'\n\tTransform
-        'spine.002'\n\tTransform 'forearm.L'\n\tTransform 'hand.L'\n\tTransform 'upper_arm.L'\n\tTransform
-        'spine.001'\n\tand more ..."
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2988702536e5d41a667789743f9d37, type: 3}
@@ -2266,7 +2261,7 @@ CharacterController:
   m_Radius: 0.42
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.002
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.95, z: 0}
 --- !u!114 &807761551044447389
@@ -2408,7 +2403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerReferences:
     <Transform>k__BackingField: {fileID: 7550820050353619469}
-    <PlayerSettings>k__BackingField: {fileID: 11400000, guid: c2762944eba223445a2ae95e77949d40,
+    <Settings>k__BackingField: {fileID: 11400000, guid: c2762944eba223445a2ae95e77949d40,
       type: 2}
     <PlayerGameplayCam>k__BackingField: {fileID: 8931313236095608741}
     <CharacterController>k__BackingField: {fileID: 1952682852}

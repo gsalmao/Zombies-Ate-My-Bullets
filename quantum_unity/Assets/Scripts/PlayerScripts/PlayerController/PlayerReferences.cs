@@ -14,13 +14,12 @@ namespace ZAMB.PlayerScripts.PlayerController
         public static Transform ExposedTransform { get; private set; }
 
         [field:SerializeField] internal Transform Transform { get; private set; }
-        [field:SerializeField] internal PlayerSettings PlayerSettings { get; private set; }
+        [field:SerializeField] internal PlayerSettings Settings { get; private set; }
         [field: SerializeField] internal CinemachineFreeLook PlayerGameplayCam { get; private set; }
         [field: SerializeField] internal CharacterController CharacterController { get; private set; }
         [field:SerializeField] internal Animator PlayerAnimator { get; private set; }
         [field:SerializeField] internal Animator WeaponAnimator { get; private set; }
 
         internal void Init() => ExposedTransform = Transform;
-
     }
 }
