@@ -6,7 +6,7 @@ using ZAMB.Settings;
 namespace ZAMB.PlayerScripts.PlayerController
 {
     /// <summary>
-    /// Hold references of the player to be used inside of the FSM. Exposes just the Transform, for enemies's logic.
+    /// Hold references of the player to be used inside of the FSM. Exposes just a static Transform, for enemies's logic.
     /// </summary>
     [Serializable]
     public class PlayerReferences
@@ -16,6 +16,7 @@ namespace ZAMB.PlayerScripts.PlayerController
         [field:SerializeField] internal Transform Transform { get; private set; }
         [field:SerializeField] internal PlayerSettings PlayerSettings { get; private set; }
         [field: SerializeField] internal CinemachineFreeLook PlayerGameplayCam { get; private set; }
+        [field: SerializeField] internal CharacterController CharacterController { get; private set; }
         [field:SerializeField] internal Animator PlayerAnimator { get; private set; }
         [field:SerializeField] internal Animator WeaponAnimator { get; private set; }
 

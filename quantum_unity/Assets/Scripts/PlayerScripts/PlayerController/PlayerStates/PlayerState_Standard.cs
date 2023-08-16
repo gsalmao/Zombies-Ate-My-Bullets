@@ -9,11 +9,13 @@ namespace ZAMB.PlayerScripts.PlayerController
         public PlayerState_Standard(PlayerController playerController, PlayerReferences playerReferences) : base(playerController, playerReferences) { }
 
         private PlayerSettings_Standard _settings;
+        private CharacterController _characterController;
         private Transform transform;
         private Animator animator;
         private CinemachineFreeLook camera;
         private Vector3 moveInputCorrectAxis;
         private Vector3 moveDirection;
+        private Vector3 gravity;
         private float turnSmoothVelocity;
         private float targetAngle;
         private float angle;
@@ -22,14 +24,23 @@ namespace ZAMB.PlayerScripts.PlayerController
         internal override void EnterState()
         {
             base.EnterState();
-            transform = playerReferences.Transform;
             _settings = playerReferences.PlayerSettings.Standard;
+            _characterController = playerReferences.CharacterController;
+            transform = playerReferences.Transform;
             camera = playerReferences.PlayerGameplayCam;
             animator = playerReferences.PlayerAnimator;
+
+            gravity = new Vector3(0f, -playerReferences.PlayerSettings.GravityForce, 0f) * Time.fixedDeltaTime;
         }
 
         internal override void UpdateState()
         {
+            if(!_characterController.isGrounded)
+            {
+                playerController.ChangeState(new PlayerState_Jumping(playerController, playerReferences));
+                return;
+            }
+
             base.UpdateState();
 
             SetMovementValues();
@@ -46,8 +57,9 @@ namespace ZAMB.PlayerScripts.PlayerController
             else
                 StopWalk();
 
-            //rigidbody.value.LerpVelocity(CheckGroundNormal(moveDirection), speed, settings.VelocityLerpT);
+            _characterController.Move(moveDirection * speed * Time.fixedDeltaTime + gravity);
         }
+
         internal override void ExitState()
         {
             base.ExitState();
@@ -57,15 +69,16 @@ namespace ZAMB.PlayerScripts.PlayerController
         {
             Vector2 input = playerController.controls.Gameplay.Move.ReadValue<Vector2>();
             moveInputCorrectAxis = playerController.controls.Gameplay.Move.ReadValue<Vector2>().InputToDir();
-            Debug.Log($"Input: {input}");
-            Debug.Log($"Move Axis: {moveInputCorrectAxis}");
-            Debug.Log($"Target Angle: {targetAngle}");
 
             targetAngle = Mathf.Atan2(moveInputCorrectAxis.x, moveInputCorrectAxis.z) * Mathf.Rad2Deg + camera.m_XAxis.Value;
 
             moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, _settings.TurnSmoothTime);
             speed = 0;
+
+            Debug.Log($"MoveDirection: {moveDirection}");
+            Debug.Log($"Move Axis: {moveInputCorrectAxis}");
+            Debug.Log($"Target Angle: {targetAngle}");
         }
 
         private void SlowWalk()

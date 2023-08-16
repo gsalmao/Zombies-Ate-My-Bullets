@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace ZAMB.PlayerScripts.PlayerController
 {
     public class PlayerState

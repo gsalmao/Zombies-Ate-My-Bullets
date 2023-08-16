@@ -19,3 +19,4 @@ MonoBehaviour:
     <TurnSmoothTime>k__BackingField: 0.1
     <AnimationDampTime>k__BackingField: 0.1
     <MaxSlopeAngle>k__BackingField: 46
+  <GravityForce>k__BackingField: 0
