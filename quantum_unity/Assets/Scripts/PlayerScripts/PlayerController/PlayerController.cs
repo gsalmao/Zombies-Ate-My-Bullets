@@ -1,4 +1,3 @@
-using GameInput;
 using UnityEngine;
 
 namespace ZAMB.PlayerScripts.PlayerController
@@ -12,15 +11,15 @@ namespace ZAMB.PlayerScripts.PlayerController
 
         [SerializeField] private PlayerReferences playerReferences;
 
-        internal Controls controls;
+        //internal Controls controls;   //Setting input to Quantum callbacks
         internal Vector3 currentGravity;
 
         private float _gravityForce;
 
         private void OnEnable()
         {
-            controls = new();
-            controls.Enable();
+            //controls = new();
+            //controls.Enable();
 
             _gravityForce = playerReferences.Settings.GravityForce;
 
@@ -32,7 +31,7 @@ namespace ZAMB.PlayerScripts.PlayerController
         private void OnDisable()
         {
             CurrentState.ExitState();
-            controls.Disable();
+            //controls.Disable();
         }
 
         private void FixedUpdate()

@@ -1,0 +1,4 @@
+﻿component PlayerLink
+{
+    [HideInInspector] player_ref Player;
+}

@@ -43,7 +43,7 @@ namespace ZAMB.PlayerScripts.PlayerController
 
             base.UpdateState();
 
-            _input = playerController.controls.Gameplay.Move.ReadValue<Vector2>();
+            //_input = playerController.controls.Gameplay.Move.ReadValue<Vector2>();
 
             GetMoveDirection(_transform, _camera, _input, references.Settings.TurnTime, ref _moveDir, ref _angle, ref _turnSmoothVelocity);
 

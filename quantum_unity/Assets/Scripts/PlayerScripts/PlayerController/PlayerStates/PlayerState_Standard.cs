@@ -26,7 +26,7 @@ namespace ZAMB.PlayerScripts.PlayerController
         {
             base.EnterState();
 
-            playerController.controls.Gameplay.Jump.performed += Jump;
+            //playerController.controls.Gameplay.Jump.performed += Jump;
 
             _settings = references.Settings.Standard;
             _characterController = references.CharacterController;
@@ -42,7 +42,7 @@ namespace ZAMB.PlayerScripts.PlayerController
 
             base.UpdateState();
 
-            _input = playerController.controls.Gameplay.Move.ReadValue<Vector2>();
+            //_input = playerController.controls.Gameplay.Move.ReadValue<Vector2>();
 
             GetMoveDirection(_transform, _camera, _input, references.Settings.TurnTime, ref _moveDir, ref _angle, ref _turnSmoothVelocity);
 
@@ -73,7 +73,7 @@ namespace ZAMB.PlayerScripts.PlayerController
         internal override void ExitState()
         {
             base.ExitState();
-            playerController.controls.Gameplay.Jump.performed -= Jump;
+            //playerController.controls.Gameplay.Jump.performed -= Jump;
         }
 
         private void SlowWalk()

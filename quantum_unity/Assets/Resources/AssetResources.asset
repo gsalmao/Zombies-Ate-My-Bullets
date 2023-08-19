@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd8e95ae0daaec4496511105240e8a3, type: 3}
   m_Name: AssetResources
   m_EditorClassIdentifier: 
-  AddressablesGroup:
-    _resources: []
   AssetBundlesGroup:
     _resources: []
   ResourcesGroup:
@@ -48,8 +46,18 @@ MonoBehaviour:
         Id:
           Value: 1090595483060781529
       ResourcePath: DB/Map1_mesh
+    - Path: Resources/DB/Player_Quantum|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 1242700602406276456
+      ResourcePath: DB/Player_Quantum
     - Path: Resources/DB/Map1
       AssetRef:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/Map1
+    - Path: Resources/DB/Player_Quantum|EntityView
+      AssetRef:
+        Id:
+          Value: 2994776449047126534
+      ResourcePath: DB/Player_Quantum

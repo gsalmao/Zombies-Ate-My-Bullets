@@ -1,3 +1,16 @@
 {
-	"name": "ZAMB.Collectibles"
+    "name": "ZAMB.Collectibles",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4902303c8f5b015478327f1817fbef24"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
