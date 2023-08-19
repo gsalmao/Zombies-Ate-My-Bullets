@@ -1,55 +1,44 @@
 using EditorUtilities;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
+using static ZAMB.Settings.Consts;
 
 namespace ZAMB.Debugging
 {
     internal class PlayerAnimatorDebugger : BaseDebugger
     {
         [SerializeField] private Animator playerAnimator;
-        //[SerializeField] private Animator gunAnimator;
-        [SerializeField] private Rig rifleRigging;
+        [SerializeField] private Animator gunAnimator;
+        [SerializeField] private Rig aimRig;
+        [SerializeField] private Rig headRig;
         [SerializeField] private float animatorSpeed = 1f;
 
-        private const string moveValue = "MoveValue";
-        private const string toStandard = "ToStandard";
-        private const string toRifle = "ToRifle";
-
-        private const string rest = "Rest";
-        private const string aim = "Aim";
-        private const string shoot = "Shoot";
-
-        private void Update() => playerAnimator.SetFloat(moveValue, (Mathf.Sin(Time.time * animatorSpeed) + 1) / 2);
-
-        [Button("Get Rifle")]
-        private void GetRifle()
-        {
-            //gunAnimator?.gameObject.SetActive(true);
-            playerAnimator.SetTrigger(toRifle);
-            //gunAnimator?.Play(rest);
-            rifleRigging.weight = 1f;
-        }
-
-        [Button("Lose guns")]
-        private void LoseGuns()
-        {
-            //gunAnimator?.gameObject.SetActive(false);
-            playerAnimator.SetTrigger(toStandard);
-            rifleRigging.weight = 0f;
-        }
+        private void Update() => playerAnimator.SetFloat(MoveValue, (Mathf.Sin(Time.time * animatorSpeed) + 1) / 2);
 
         [Button("Aim")]
-        private void Aim()
+        private void StartAim()
         {
-            playerAnimator.SetBool(aim, true);
-            //gunAnimator?.Play(aim);
+            playerAnimator.SetBool(Aim, true);
+            gunAnimator.SetBool(Aim, true);
+            aimRig.weight = 1f;
+            headRig.weight = 0f;
+        }
+
+        [Button("Stop Aim")]
+        private void StopAim()
+        {
+            playerAnimator.SetBool(Aim, false);
+            gunAnimator.SetBool(Aim, false);
+
+            aimRig.weight = 0f;
+            headRig.weight = 1f;
         }
 
         [Button("Shoot")]
-        private void Shoot()
+        private void PlayShoot()
         {
-            playerAnimator.SetTrigger(shoot);
-            //gunAnimator?.Play(shoot);
+            playerAnimator.SetTrigger(Shoot);
+            gunAnimator.SetTrigger(Shoot);
         }
     }
 }

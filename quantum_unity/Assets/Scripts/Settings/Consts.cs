@@ -10,10 +10,14 @@ namespace ZAMB.Settings
         public const string Grounded = "Grounded";
         public const string Aim = "Aim";
         public const string StandardAnimation = "StandardAnimation";
+
+        public const string RifleTree = "RifleTree";
         public const string RifleAnimation = "RifleAnimation";
+
         public const string PistolAnimation = "PistolAnimation";
         public const string SwitchWeapon = "SwitchWeapon";
         public const string Shoot = "Shoot";
+        public const string Rest = "Rest";
 
         //Layers
         public const string PlayerLayer = "Player";

@@ -26,7 +26,10 @@ namespace ZAMB.RiggingUtilities
         {
             WeightedTransformArray sources = new WeightedTransformArray();
             sources.Add(new WeightedTransform(sourceObject, 1f));
+
             aim.data.sourceObjects = sources;
+
+            //Disabling the Player so the rigBuilder.Build() works
             playerAnimator.enabled = false;
             rigBuilder.Build();
             playerAnimator.enabled = true;

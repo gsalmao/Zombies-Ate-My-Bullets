@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523386256778944418}
   m_LocalRotation: {x: -0.6272281, y: 0.5613864, z: 0.38492674, w: -0.3784993}
-  m_LocalPosition: {x: -0.045, y: -0.057, z: -0.029}
+  m_LocalPosition: {x: -0.069, y: -0.056, z: -0.074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3209382465012189940}
   - component: {fileID: 3209382465013155892}
   - component: {fileID: 2909124405881022742}
+  - component: {fileID: 8292715961861424277}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -57,8 +58,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3209382465010964212}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.062000036, z: 0.37900004}
+  m_LocalRotation: {x: 0.00634914, y: 0.031919286, z: 0.19498695, w: 0.9802658}
+  m_LocalPosition: {x: -0.157, y: -0.172, z: 0.322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -67,7 +68,7 @@ Transform:
   - {fileID: 7310532540176820116}
   m_Father: {fileID: 4328337120917314118}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 3.73, z: 22.5}
 --- !u!33 &3209382465012189940
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -130,6 +131,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &8292715961861424277
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3209382465010964212}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3feb7dcf30dbacf4bb4b303b95e083d2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3209382465010964214
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3209382465011387094
 Transform:
   m_ObjectHideFlags: 0

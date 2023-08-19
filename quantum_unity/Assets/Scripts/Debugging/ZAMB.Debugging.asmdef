@@ -3,7 +3,8 @@
     "rootNamespace": "ZAMB.Debugging",
     "references": [
         "GUID:9f985160704b00044a4f7715794f9077",
-        "GUID:7f7d1af65c2641843945d409d28f2e20"
+        "GUID:7f7d1af65c2641843945d409d28f2e20",
+        "GUID:4902303c8f5b015478327f1817fbef24"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
