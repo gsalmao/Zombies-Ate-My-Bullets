@@ -154,3 +154,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Ignore project clone created with ParrelSync
+quantum_unity_clone_0
