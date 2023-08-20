@@ -10,7 +10,7 @@ namespace ZAMB.RiggingUtilities
     public class AimConstraintController : MonoBehaviour
     {
         [SerializeField] private RigBuilder rigBuilder;
-        [SerializeField] private Animator playerAnimator;
+        [SerializeField] private Animator animator;
         [SerializeField] private MultiAimConstraint aim;
         [SerializeField] private Transform body;
         [SerializeField] private float maxAngle;
@@ -29,10 +29,10 @@ namespace ZAMB.RiggingUtilities
 
             aim.data.sourceObjects = sources;
 
-            //Disabling the Player so the rigBuilder.Build() works
-            playerAnimator.enabled = false;
+            //Disabling the Animator so that rigBuilder.Build() works
+            animator.enabled = false;
             rigBuilder.Build();
-            playerAnimator.enabled = true;
+            animator.enabled = true;
 
             _aimAxis = GetAxisAsVector3(aim.data.aimAxis);
             _constrainedObject = aim.data.constrainedObject;
@@ -54,10 +54,7 @@ namespace ZAMB.RiggingUtilities
 
             _angleBetween = Vector3.Angle(_aimAxis, _sourceObject.position - _constrainedObject.position);
 
-            if (_angleBetween < maxAngle)
-                weightMod = 1f;
-            else
-                weightMod = -1f;
+            weightMod = _angleBetween < maxAngle ? 1f : -1f;
 
             aim.weight += weightMod * changeWeightSpeed * Time.deltaTime;
             aim.weight = Mathf.Clamp(aim.weight, 0f, 1f);

@@ -870,7 +870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigBuilder: {fileID: 4564244219219444430}
-  playerAnimator: {fileID: 741694494135146020}
+  animator: {fileID: 0}
   aim: {fileID: 5094654917452778726}
   body: {fileID: 6677479126258158686}
   maxAngle: 60
@@ -2608,7 +2608,6 @@ GameObject:
   - component: {fileID: 4564244219219444430}
   - component: {fileID: 4083410743034180494}
   - component: {fileID: 8759251718317552918}
-  - component: {fileID: 644924075239812062}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -2796,23 +2795,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d20297e403ae6f4094b21d6569d222d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &644924075239812062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6332337390270830308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0dfaa69d48073546ab1afd7641d7d36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerAnimator: {fileID: 741694494135146020}
-  gunAnimator: {fileID: 5575171712229116804}
-  aimRig: {fileID: 6531697050477172187}
-  headRig: {fileID: 1136469282283301161}
-  animatorSpeed: 1
 --- !u!1 &6360160570672126924
 GameObject:
   m_ObjectHideFlags: 0
@@ -4023,12 +4005,6 @@ Transform:
 --- !u!4 &2918419797341685014 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1642432116820773383, guid: 97534eb18cf85e44fb0b641499293f37,
-    type: 3}
-  m_PrefabInstance: {fileID: 4488778318888259345}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &5575171712229116804 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8292715961861424277, guid: 97534eb18cf85e44fb0b641499293f37,
     type: 3}
   m_PrefabInstance: {fileID: 4488778318888259345}
   m_PrefabAsset: {fileID: 0}

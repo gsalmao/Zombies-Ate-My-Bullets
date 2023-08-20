@@ -9,8 +9,6 @@ namespace ZAMB.Debugging
     {
         [SerializeField] private Animator playerAnimator;
         [SerializeField] private Animator gunAnimator;
-        [SerializeField] private Rig aimRig;
-        [SerializeField] private Rig headRig;
         [SerializeField] private float animatorSpeed = 1f;
 
         private void Update() => playerAnimator.SetFloat(MoveValue, (Mathf.Sin(Time.time * animatorSpeed) + 1) / 2);
@@ -20,8 +18,6 @@ namespace ZAMB.Debugging
         {
             playerAnimator.SetBool(Aim, true);
             gunAnimator.SetBool(Aim, true);
-            aimRig.weight = 1f;
-            headRig.weight = 0f;
         }
 
         [Button("Stop Aim")]
@@ -29,9 +25,6 @@ namespace ZAMB.Debugging
         {
             playerAnimator.SetBool(Aim, false);
             gunAnimator.SetBool(Aim, false);
-
-            aimRig.weight = 0f;
-            headRig.weight = 1f;
         }
 
         [Button("Shoot")]
