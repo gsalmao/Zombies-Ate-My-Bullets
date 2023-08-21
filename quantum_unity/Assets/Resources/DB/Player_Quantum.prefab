@@ -870,7 +870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigBuilder: {fileID: 4564244219219444430}
-  animator: {fileID: 0}
+  animator: {fileID: 741694494135146020}
   aim: {fileID: 5094654917452778726}
   body: {fileID: 6677479126258158686}
   maxAngle: 60
