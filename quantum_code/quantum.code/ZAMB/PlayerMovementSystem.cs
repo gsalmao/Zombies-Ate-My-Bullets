@@ -15,12 +15,12 @@ namespace Quantum
 
         public override void Update(Frame f, ref Filter filter)
         {
-
-            var input = f.GetPlayerInput(filter.Link->Player); //filter.Link-> returns index of owner player
+            var player = filter.Link->Player;       //filter.Link-> returns index of owner player
+            var input = f.GetPlayerInput(player);
 
             if (input->Jump.WasPressed)
                 filter.KCC->Jump(f);
-
+            
             //Normalizing speed to prevent cheaters.
             if (input->Direction.SqrMagnitude > 1)
                 input->Direction = input->Direction.Normalized;

@@ -21,7 +21,7 @@ namespace ZAMB.PlayerScripts
 
             _playerRef = playerLink->Player;
 
-            playerAnimation.Init(_playerRef, entityRef);
+            playerAnimation.Init(entityRef, _playerRef);
 
             if (!QuantumRunner.Default.Game.PlayerIsLocal(_playerRef))
                 return;

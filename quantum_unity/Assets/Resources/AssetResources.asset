@@ -61,3 +61,8 @@ MonoBehaviour:
         Id:
           Value: 2994776449047126534
       ResourcePath: DB/Player_Quantum
+    - Path: Resources/DB/NestedAssetType|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 4319711701057195675
+      ResourcePath: DB/NestedAssetType
