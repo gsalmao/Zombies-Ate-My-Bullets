@@ -27,6 +27,9 @@ namespace ZAMB.PlayerScripts
         {
             _entityRef = entityRef;
             _playerRef = playerRef;
+
+            QuantumEvent.Subscribe<EventStartAiming>(this, StartAiming);
+            QuantumEvent.Subscribe<EventStopAiming>(this, StopAiming);
         }
 
         private void Update()
@@ -57,7 +60,6 @@ namespace ZAMB.PlayerScripts
 
             _prevGrounded = _grounded;
         }
-
         private void Walk()
         {
             foreach(Animator animator in animators)
@@ -72,6 +74,24 @@ namespace ZAMB.PlayerScripts
         {
             foreach (Animator animator in animators)
                 animator.SetFloat(MoveValue, 0f, settings.Standard.AnimationDampTime, Time.deltaTime);
+        }
+
+        private void StartAiming(EventStartAiming e)
+        {
+            if (e.playerRef != _playerRef)
+                return;
+
+            foreach (Animator animator in animators)
+                animator.SetBool(Aim, true);
+        }
+
+        private void StopAiming(EventStopAiming e)
+        {
+            if (e.playerRef != _playerRef)
+                return;
+
+            foreach (Animator animator in animators)
+                animator.SetBool(Aim, false);
         }
     }
 }

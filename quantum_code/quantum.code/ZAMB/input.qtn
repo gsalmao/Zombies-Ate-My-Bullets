@@ -3,6 +3,6 @@
     FPVector2 Direction;
     button Jump;
     button Run;
-    button Aim;
     button Shoot;
+    button Aim;
 }

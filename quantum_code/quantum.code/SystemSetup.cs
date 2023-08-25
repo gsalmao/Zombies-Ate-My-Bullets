@@ -20,7 +20,8 @@ namespace Quantum {
         new Core.PlayerConnectedSystem(),
 
         // user systems go here 
-        new PlayerMovementSystem()
+        new PlayerStandardSystem(),
+        new PlayerAimingSystem()
       };
     }
   }

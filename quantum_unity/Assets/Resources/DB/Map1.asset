@@ -85,9 +85,12 @@ MonoBehaviour:
       MutableMode: 0
     MapEntities: []
   Prototypes:
-  - PlayerLink:
+  - PlayerAiming: []
+    PlayerLink:
     - Player:
         _index: 1
+    PlayerStandard:
+    - _empty_prototype_dummy_field_: 0
     CharacterController2D: []
     CharacterController3D:
     - Config:
@@ -109,14 +112,14 @@ MonoBehaviour:
           X:
             RawValue: 0
           Y:
-            RawValue: 62259
+            RawValue: 65536
           Z:
             RawValue: 0
         BoxExtents:
           X:
             RawValue: 19660
           Y:
-            RawValue: 60293
+            RawValue: 65536
           Z:
             RawValue: 19660
         RotationOffset:

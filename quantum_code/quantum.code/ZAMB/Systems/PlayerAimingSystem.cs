@@ -1,16 +1,17 @@
 ﻿using Photon.Deterministic;
 using Quantum.Profiling;
-using static Quantum.PlayerMovementSystem;
+using static Quantum.PlayerAimingSystem;
 
 namespace Quantum
 {
-    public unsafe class PlayerMovementSystem : SystemMainThreadFilter<Filter>, ISignalOnPlayerDataSet
+    public unsafe class PlayerAimingSystem : SystemMainThreadFilter<Filter>, ISignalOnPlayerDataSet
     {
         private const float rotationDegrees = 5f;
 
         public struct Filter
         {
             public EntityRef Entity;
+            public PlayerAiming* flag;
             public CharacterController3D* KCC;
             public Transform3D* Transform;
             public PlayerLink* Link;
@@ -21,19 +22,12 @@ namespace Quantum
             PlayerRef player = filter.Link->Player;
             Input* input = f.GetPlayerInput(player);
 
-            if (input->Jump.WasPressed)
-                filter.KCC->Jump(f);
-
-            SetMoveConfigs(f, ref filter, input->Run);
-            
-            //Normalizing speed to prevent cheaters.
-            if (input->Direction.SqrMagnitude > 1)
-                input->Direction = input->Direction.Normalized;
-
-            filter.KCC->Move(f, filter.Entity, input->Direction.XOY);
-            
-            if (input->Direction != default)
-                filter.Transform->Rotation = FPQuaternion.LookRotation(input->Direction.XOY);
+            if (!input->Aim || !filter.KCC->Grounded)
+            {
+                f.Remove<PlayerAiming>(filter.Entity);
+                f.Add<PlayerStandard>(filter.Entity);
+                f.Events.StopAiming(filter.Link->Player);
+            }
         }
 
         //Called everytime a serialized RuntimePlayer is part of a specific tick input
