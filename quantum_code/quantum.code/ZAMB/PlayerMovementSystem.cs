@@ -1,10 +1,13 @@
 ﻿using Photon.Deterministic;
+using Quantum.Profiling;
 using static Quantum.PlayerMovementSystem;
 
 namespace Quantum
 {
     public unsafe class PlayerMovementSystem : SystemMainThreadFilter<Filter>, ISignalOnPlayerDataSet
     {
+        private const float rotationDegrees = 5f;
+
         public struct Filter
         {
             public EntityRef Entity;
@@ -15,18 +18,20 @@ namespace Quantum
 
         public override void Update(Frame f, ref Filter filter)
         {
-            var player = filter.Link->Player;       //filter.Link-> returns index of owner player
-            var input = f.GetPlayerInput(player);
+            PlayerRef player = filter.Link->Player;
+            Input* input = f.GetPlayerInput(player);
 
             if (input->Jump.WasPressed)
                 filter.KCC->Jump(f);
+
+            SetMoveConfigs(f, ref filter, input->Run);
             
             //Normalizing speed to prevent cheaters.
             if (input->Direction.SqrMagnitude > 1)
                 input->Direction = input->Direction.Normalized;
 
             filter.KCC->Move(f, filter.Entity, input->Direction.XOY);
-
+            
             if (input->Direction != default)
                 filter.Transform->Rotation = FPQuaternion.LookRotation(input->Direction.XOY);
         }
@@ -48,6 +53,24 @@ namespace Quantum
             {
                 t->Position.X = 0 + player;
             }
+        }
+
+        private void SetMoveConfigs(Frame f, ref Filter filter, bool runButton)
+        {
+            var config = f.FindAsset<CharacterController3DConfig>(filter.KCC->Config.Id);
+
+            if (runButton)
+            {
+                config.Acceleration = 80;
+                config.MaxSpeed = 12;
+            }
+            else
+            {
+                config.Acceleration = 25;
+                config.MaxSpeed = 6;
+            }
+
+            filter.KCC->SetConfig(f, config);
         }
     }
 }

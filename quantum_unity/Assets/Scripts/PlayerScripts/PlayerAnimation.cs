@@ -31,7 +31,7 @@ namespace ZAMB.PlayerScripts
 
         private void Update()
         {
-            var kcc = QuantumRunner.Default.Game.Frames.Predicted.Unsafe.GetPointer<CharacterController3D>(_entityRef);
+            var kcc = QuantumRunner.Default.Game.Frames.Verified.Unsafe.GetPointer<CharacterController3D>(_entityRef);
 
             _grounded = kcc->Grounded;
             _velocity = kcc->Velocity.ToUnityVector3();
