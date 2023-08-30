@@ -17,7 +17,7 @@ namespace ZAMB.Utilities
         /// <summary>
         /// Check if the new value is different from previous. If it is, executes the Action.
         /// </summary>
-        public void CheckChanges(bool newValue)
+        public void Process(bool newValue)
         {
             if(Value != newValue)
             {

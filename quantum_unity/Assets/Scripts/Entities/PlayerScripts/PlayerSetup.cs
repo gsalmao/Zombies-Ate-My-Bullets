@@ -11,6 +11,7 @@ namespace ZAMB.Entities.PlayerScripts
     {
         [SerializeField] private PlayerAnimation playerAnimation;
         [SerializeField] private AimConstraintController headAim;
+        [SerializeField] private bool setHeadAim;
 
         private PlayerRef _playerRef;
 
@@ -31,7 +32,8 @@ namespace ZAMB.Entities.PlayerScripts
             
             playerCameras.SetupCameras(transform);
 
-            headAim.Init(playerCameras.LookDirection);
+            if(setHeadAim)
+                headAim.Init(playerCameras.LookDirection);
         }
     }
 }

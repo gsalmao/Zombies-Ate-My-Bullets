@@ -62,7 +62,7 @@ MonoBehaviour:
       Id:
         Value: 0
     SourceCollider: {fileID: 0}
-    IsEnabled: 0
+    IsEnabled: 1
     Shape2D:
       ShapeType: 0
       PolygonCollider:
@@ -96,16 +96,16 @@ MonoBehaviour:
         X:
           RawValue: 0
         Y:
-          RawValue: 0
+          RawValue: 65536
         Z:
           RawValue: 0
       BoxExtents:
         X:
-          RawValue: 32768
+          RawValue: 16384
         Y:
-          RawValue: 32768
+          RawValue: 65536
         Z:
-          RawValue: 32768
+          RawValue: 16384
       RotationOffset:
         X:
           RawValue: 0
@@ -121,12 +121,12 @@ MonoBehaviour:
     CallbackFlags:
       Value: 0
   PhysicsBody:
-    IsEnabled: 0
-    Version2D: 0
-    Version3D: 0
+    IsEnabled: 1
+    Version2D: 2
+    Version3D: 2
     Config2D: 116
     Config3D: 58
-    RotationFreeze: 0
+    RotationFreeze: 5
     Mass:
       RawValue: 65536
     Drag:
@@ -181,7 +181,7 @@ MonoBehaviour:
       Value:
         RawValue: 0
   NavMeshAvoidanceAgent:
-    IsEnabled: 1
+    IsEnabled: 0
   View:
     Id:
       Value: 0
@@ -385,9 +385,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68afcb29e3f1dec4a91388fa1ecdeed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 8061819616818252254}
 --- !u!4 &8061819616808969802 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5091242709008406442, guid: 6d30ae6f59058ea4790c0d9389de2ac9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2974324632126157280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8061819616818252254 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5091242708998600766, guid: 6d30ae6f59058ea4790c0d9389de2ac9,
     type: 3}
   m_PrefabInstance: {fileID: 2974324632126157280}
   m_PrefabAsset: {fileID: 0}

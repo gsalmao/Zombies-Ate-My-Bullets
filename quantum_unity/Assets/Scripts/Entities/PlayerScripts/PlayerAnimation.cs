@@ -21,7 +21,6 @@ namespace ZAMB.Entities.PlayerScripts
         internal void Init(EntityRef entityRef, PlayerRef playerRef)
         {
             _groundedTrigger = new();
-
             _entityRef = entityRef;
             _playerRef = playerRef;
 
@@ -40,7 +39,7 @@ namespace ZAMB.Entities.PlayerScripts
 
             _velocity = kcc->Velocity.ToUnityVector3();
 
-            _groundedTrigger.CheckChanges(kcc->Grounded);
+            _groundedTrigger.Process(kcc->Grounded);
 
             if (_groundedTrigger.Value && _velocity.magnitude > 0f)
             {
