@@ -6,6 +6,62 @@
 using System;
 namespace Quantum.Prototypes.Unity {
   [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.AIBlackboardComponent))]
+  public class AIBlackboardComponent_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.AIBlackboardComponent_Prototype> {
+    public Quantum.AssetRefAIBlackboard Board;
+    [Quantum.Inspector.DynamicCollectionAttribute()]
+    public BlackboardEntry_Prototype[] Entries = System.Array.Empty<BlackboardEntry_Prototype>();
+
+    public sealed override Quantum.Prototypes.AIBlackboardComponent_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.AIBlackboardComponent_Prototype();
+      result.Board = this.Board;
+      result.Entries = System.Array.ConvertAll(this.Entries, x => x.Convert(converter));
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.BlackboardEntry))]
+  public class BlackboardEntry_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.BlackboardEntry_Prototype> {
+    public BlackboardValue_Prototype Value;
+    [Quantum.Inspector.DynamicCollectionAttribute()]
+    public Quantum.AssetRefBTDecorator[] ReactiveDecorators = System.Array.Empty<Quantum.AssetRefBTDecorator>();
+
+    public sealed override Quantum.Prototypes.BlackboardEntry_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.BlackboardEntry_Prototype();
+      result.Value = this.Value.Convert(converter);
+      result.ReactiveDecorators = this.ReactiveDecorators;
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.BlackboardValue))]
+  public class BlackboardValue_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.BlackboardValue_Prototype> {
+    public System.String _field_used_;
+    public Quantum.QBoolean BooleanValue;
+    public System.Byte ByteValue;
+    public System.Int32 IntegerValue;
+    public Photon.Deterministic.FP FPValue;
+    public Photon.Deterministic.FPVector2 FPVector2Value;
+    public Photon.Deterministic.FPVector3 FPVector3Value;
+    [Quantum.LocalReference]
+    public global::EntityPrototype EntityRefValue;
+    public Quantum.AssetRef AssetRefValue;
+
+    public sealed override Quantum.Prototypes.BlackboardValue_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.BlackboardValue_Prototype();
+      result._field_used_ = this._field_used_;
+      result.BooleanValue = this.BooleanValue;
+      result.ByteValue = this.ByteValue;
+      result.IntegerValue = this.IntegerValue;
+      result.FPValue = this.FPValue;
+      result.FPVector2Value = this.FPVector2Value;
+      result.FPVector3Value = this.FPVector3Value;
+      converter.Convert(this.EntityRefValue, out result.EntityRefValue);
+      result.AssetRefValue = this.AssetRefValue;
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
   [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.PhysicsJoints3D))]
   public class PhysicsJoints3D_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.PhysicsJoints3D_Prototype> {
     [Quantum.Inspector.DynamicCollectionAttribute()]

@@ -38,7 +38,9 @@ MonoBehaviour:
     GridSizeX: 32
     GridSizeY: 32
     GridNodeSize: 4
-    NavMeshLinks: []
+    NavMeshLinks:
+    - Id:
+        Value: 4204210392636870712
     Regions: []
     StaticColliders2D: []
     StaticColliders3D:
@@ -83,14 +85,184 @@ MonoBehaviour:
         ColliderIndex: 0
         MutableMode: 0
       MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -622592
+        Y:
+          RawValue: 131072
+        Z:
+          RawValue: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 32768
+        Y:
+          RawValue: 163840
+        Z:
+          RawValue: 655360
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Wall (1)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 1
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -262144
+        Y:
+          RawValue: 131072
+        Z:
+          RawValue: 327680
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 32768
+        Y:
+          RawValue: 163840
+        Z:
+          RawValue: 327680
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Wall (2)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 2
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 144834
+        Y:
+          RawValue: 131072
+        Z:
+          RawValue: -327680
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 32768
+        Y:
+          RawValue: 163840
+        Z:
+          RawValue: 327680
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Wall (3)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 3
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 622592
+        Y:
+          RawValue: 131072
+        Z:
+          RawValue: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 32768
+        Y:
+          RawValue: 163840
+        Z:
+          RawValue: 655360
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Wall (4)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 4
+        MutableMode: 0
+      MutableMode: 0
     MapEntities: []
   Prototypes:
-  - PlayerAiming: []
+  - AIBlackboardComponent: []
+    BTAgent: []
+    CompoundBTAgent: []
+    GOAPAgent: []
+    HFSMAgent: []
+    PlayerAiming: []
     PlayerLink:
     - Player:
         _index: 1
     PlayerStandard:
     - _empty_prototype_dummy_field_: 0
+    UTAgent: []
     CharacterController2D: []
     CharacterController3D:
     - Config:
@@ -147,11 +319,95 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 193990
+          RawValue: 618004
+        Y:
+          RawValue: 309329
+        Z:
+          RawValue: 157286
+      Rotation:
+        X:
+          RawValue: 0
         Y:
           RawValue: 0
         Z:
-          RawValue: -108108
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - AIBlackboardComponent: []
+    BTAgent: []
+    CompoundBTAgent: []
+    GOAPAgent: []
+    HFSMAgent:
+    - Data:
+        Root:
+          Id:
+            Value: 3467821135930562146
+        CurrentState:
+          Id:
+            Value: 1414648971799129923
+        Time:
+          RawValue: 0
+        Times:
+        - RawValue: 0
+        - RawValue: 0
+        - RawValue: 0
+        - RawValue: 0
+        - RawValue: 0
+        - RawValue: 0
+        - RawValue: 0
+        - RawValue: 0
+      Config:
+        Id:
+          Value: 0
+    PlayerAiming: []
+    PlayerLink: []
+    PlayerStandard: []
+    UTAgent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder:
+    - AgentConfig:
+        Id:
+          Value: 2
+      InitialTarget:
+        _hasValue: 1
+        _value:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+      InitialTargetNavMesh:
+        Id:
+          Value: 4204210392636870712
+      InitialTargetNavMeshName: 
+    NavMeshSteeringAgent:
+    - OverrideMaxSpeed: 1
+      OverrideAcceleration: 0
+      MaxSpeed:
+        RawValue: 65536
+      Acceleration:
+        RawValue: 0
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 255590
+        Y:
+          RawValue: -32768
+        Z:
+          RawValue: -240320
       Rotation:
         X:
           RawValue: 0

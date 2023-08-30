@@ -25,13 +25,13 @@ MonoBehaviour:
       Z:
         RawValue: 0
     Radius:
-      RawValue: 7864
+      RawValue: 11141
     MaxPenetration:
-      RawValue: 3275
+      RawValue: 0
     PenetrationCorrection:
-      RawValue: 32768
+      RawValue: 57016
     Extent:
-      RawValue: 6553
+      RawValue: 9830
     MaxContacts: 8
     LayerMask:
       BitMask: 503
@@ -44,7 +44,7 @@ MonoBehaviour:
     BaseJumpImpulse:
       RawValue: 393216
     MaxSpeed:
-      RawValue: 196608
+      RawValue: 393216
     Gravity:
       X:
         RawValue: 0

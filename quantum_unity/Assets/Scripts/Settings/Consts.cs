@@ -5,7 +5,7 @@ namespace ZAMB.Settings
     /// </summary>
     public static class Consts
     {
-        //Animation Parameters
+        //Player Animation Parameters
         public const string MoveValue = "MoveValue";
         public const string Grounded = "Grounded";
         public const string Aim = "Aim";
@@ -18,6 +18,11 @@ namespace ZAMB.Settings
         public const string SwitchWeapon = "SwitchWeapon";
         public const string Shoot = "Shoot";
         public const string Rest = "Rest";
+
+        //Zombie Animation Parameters
+        public const string Walking = "Walking";
+        public const string Attack = "Attack";
+        public const string Death = "Death";
 
         //Layers
         public const string PlayerLayer = "Player";

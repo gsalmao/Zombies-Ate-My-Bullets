@@ -1,4 +1,5 @@
 ﻿using Photon.Deterministic;
+using Quantum.ZAMB.Systems;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,13 @@ namespace Quantum {
 
         // user systems go here 
         new PlayerStandardSystem(),
-        new PlayerAimingSystem()
+        new PlayerAimingSystem(),
+        
+        //Bot SDK
+        new AISystem(),
+#if DEBUG
+          new BotSDKDebuggerSystem()
+#endif
       };
     }
   }

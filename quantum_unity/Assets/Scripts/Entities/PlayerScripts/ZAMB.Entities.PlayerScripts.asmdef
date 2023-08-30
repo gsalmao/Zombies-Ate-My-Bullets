@@ -1,0 +1,21 @@
+{
+    "name": "ZAMB.Entities.PlayerScripts",
+    "rootNamespace": "ZAMB.Entities.PlayerScripts",
+    "references": [
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:f6fa0c2f8b9a9f64897d3351666f3d66",
+        "GUID:3a82b4d764344324991ac240eeaae816",
+        "GUID:0cabb2af78d0d8c49a9e39e1145644bb",
+        "GUID:4902303c8f5b015478327f1817fbef24",
+        "GUID:81169b8181fb203468e6317fe7ad8415"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -41,26 +41,76 @@ MonoBehaviour:
         Id:
           Value: 5
       ResourcePath: DB/Configs/SimulationConfig
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|DebugAction_0
+      AssetRef:
+        Id:
+          Value: 117171784202019511
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
     - Path: Resources/DB/Map1_mesh
       AssetRef:
         Id:
           Value: 1090595483060781529
       ResourcePath: DB/Map1_mesh
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|Idle_0
+      AssetRef:
+        Id:
+          Value: 1139968165541635246
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
     - Path: Resources/DB/Player_Quantum|EntityPrototype
       AssetRef:
         Id:
           Value: 1242700602406276456
       ResourcePath: DB/Player_Quantum
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|Follow_1
+      AssetRef:
+        Id:
+          Value: 1414648971799129923
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
+    - Path: Resources/DB/Zombie|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 1474362596521399077
+      ResourcePath: DB/Zombie
     - Path: Resources/DB/Map1
       AssetRef:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/Map1
+    - Path: Resources/DB/Map1_Navmesh_data
+      AssetRef:
+        Id:
+          Value: 2101512186209535400
+      ResourcePath: DB/Map1_Navmesh_data
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|DebugAction_1
+      AssetRef:
+        Id:
+          Value: 2261601014341974746
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TrueDecision_0
+      AssetRef:
+        Id:
+          Value: 2577754747413278243
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
     - Path: Resources/DB/Player_Quantum|EntityView
       AssetRef:
         Id:
           Value: 2994776449047126534
       ResourcePath: DB/Player_Quantum
+    - Path: Resources/DB/Zombie|EntityView
+      AssetRef:
+        Id:
+          Value: 3041620906567764636
+      ResourcePath: DB/Zombie
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM
+      AssetRef:
+        Id:
+          Value: 3467821135930562146
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
+    - Path: Resources/DB/Map1_Navmesh
+      AssetRef:
+        Id:
+          Value: 4204210392636870712
+      ResourcePath: DB/Map1_Navmesh
     - Path: Resources/DB/NestedAssetType|EntityPrototype
       AssetRef:
         Id:
