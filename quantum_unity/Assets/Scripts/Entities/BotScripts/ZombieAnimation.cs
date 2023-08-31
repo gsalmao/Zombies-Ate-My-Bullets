@@ -19,7 +19,7 @@ namespace ZAMB.Entities.BotScripts
         {
             _walkTrigger = new();
             _entityRef = entityRef;
-
+            animator.SetFloat(CycleOffset, Random.Range(0f, 1f));
             enabled = true;
         }
 

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8072541789036257290}
   - component: {fileID: 8072541789036257291}
   - component: {fileID: 8072541789036257288}
-  - component: {fileID: 8072541789036257286}
   - component: {fileID: 8439681673905948532}
   m_Layer: 0
   m_Name: Zombie
@@ -175,7 +174,7 @@ MonoBehaviour:
     MaxSpeed:
       IsEnabled: 1
       Value:
-        RawValue: 65536
+        RawValue: 131072
     Acceleration:
       IsEnabled: 0
       Value:
@@ -224,7 +223,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8072541789036257286}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ZAMB.Debugging.BotDebugger, ZAMB.Debugging
         m_MethodName: StartDebugging
         m_Mode: 1
@@ -273,18 +272,6 @@ MonoBehaviour:
     Config:
       Id:
         Value: 0
---- !u!114 &8072541789036257286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8072541789036257289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc363858c631cb14f9e082a57cbb3dd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8439681673905948532
 MonoBehaviour:
   m_ObjectHideFlags: 0

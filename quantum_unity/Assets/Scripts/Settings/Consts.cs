@@ -23,6 +23,7 @@ namespace ZAMB.Settings
         public const string Walking = "Walking";
         public const string Attack = "Attack";
         public const string Death = "Death";
+        public const string CycleOffset = "CycleOffset";
 
         //Layers
         public const string PlayerLayer = "Player";

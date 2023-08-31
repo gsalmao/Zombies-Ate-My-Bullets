@@ -76,6 +76,10 @@ namespace Quantum.Editor {
       public Quantum.GOAPBackValidation[] GOAPBackValidation = {};
       public Quantum.GOAPHeuristic[] GOAPHeuristic = {};
       public Quantum.SimulationConfig[] SimulationConfig = {};
+      public Quantum.DecreaseTimer[] DecreaseTimer = {};
+      public Quantum.FindClosestPlayer[] FindClosestPlayer = {};
+      public Quantum.SetBlackboardFP[] SetBlackboardFP = {};
+      public Quantum.UpdateTargetPosition[] UpdateTargetPosition = {};
       public Quantum.BinaryData[] BinaryData = {};
       public Quantum.CharacterController2DConfig[] CharacterController2DConfig = {};
       public Quantum.CharacterController3DConfig[] CharacterController3DConfig = {};

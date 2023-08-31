@@ -2,6 +2,13 @@
 using System;
 
 namespace Quantum {
-  partial class RuntimeConfig {
-  }
+  partial class RuntimeConfig
+    {
+        public AssetRef AIBlackboardInitializer;
+
+        partial void SerializeUserData(BitStream stream)
+        {
+            stream.Serialize(ref AIBlackboardInitializer.Id);
+        }
+    }
 }

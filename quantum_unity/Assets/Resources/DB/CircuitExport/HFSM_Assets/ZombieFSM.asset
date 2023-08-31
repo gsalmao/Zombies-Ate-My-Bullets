@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7662255629281176270
+--- !u!114 &-8699787089942025631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,16 +9,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08008114f07c414394b24acb495f480, type: 3}
-  m_Name: DebugAction_1
+  m_Script: {fileID: 11500000, guid: 5208639a4616a624daf5935962e3b1eb, type: 3}
+  m_Name: FindClosestPlayer_1
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|DebugAction_1
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|FindClosestPlayer_1
       Guid:
-        Value: 2261601014341974746
+        Value: 1145229973428987411
     Label: 
-    Message: "Muita \xE1gua."
+    targetKey:
+      Key: Target
+--- !u!114 &-5464068065066692265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19d26b77ff7c3044ad7b6372e67c1f0, type: 3}
+  m_Name: UpdateTargetPosition_0
+  m_EditorClassIdentifier: 
+  Settings:
+    Identifier:
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|UpdateTargetPosition_0
+      Guid:
+        Value: 3141307847807612833
+    Label: 
+    targetKey:
+      Key: Target
 --- !u!114 &-3617478972963798105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,19 +50,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18ff7bf909815f04187eb82fa0af10e2, type: 3}
-  m_Name: Idle_0
+  m_Name: FindClosestPlayerState_1
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|Idle_0
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|FindClosestPlayerState_1
       Guid:
         Value: 1139968165541635246
-    Label: Idle
+    Label: FindClosestPlayerState
     OnUpdateLinks: []
-    OnEnterLinks:
+    OnEnterLinks: []
+    OnExitLinks:
     - Id:
-        Value: 117171784202019511
-    OnExitLinks: []
+        Value: 1145229973428987411
     Transitions:
     - Id: 556f72ff-5993-4c4c-a015-83b31dd3efcc
       EventKey: 0
@@ -69,20 +90,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18ff7bf909815f04187eb82fa0af10e2, type: 3}
-  m_Name: Follow_1
+  m_Name: Follow_0
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|Follow_1
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|Follow_0
       Guid:
         Value: 1414648971799129923
     Label: Follow
-    OnUpdateLinks: []
-    OnEnterLinks:
+    OnUpdateLinks:
     - Id:
-        Value: 2261601014341974746
+        Value: 3141307847807612833
+    OnEnterLinks: []
     OnExitLinks: []
-    Transitions: []
+    Transitions:
+    - Id: 600ebbc0-3d77-4303-ac63-5a77b81f4c1e
+      EventKey: 0
+      DecisionLink:
+        Id:
+          Value: 3717258919931521646
+      StateLink:
+        Id:
+          Value: 1139968165541635246
+      TransitionSetLink:
+        Id:
+          Value: 0
     ChildrenLinks: []
     ParentLink:
       Id:
@@ -111,9 +143,8 @@ MonoBehaviour:
         Value: 1139968165541635246
     - Id:
         Value: 1414648971799129923
-    EventsNames:
-    - PlayerJump
---- !u!114 &390068966414312925
+    EventsNames: []
+--- !u!114 &1627903040293783291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,16 +153,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08008114f07c414394b24acb495f480, type: 3}
-  m_Name: DebugAction_0
+  m_Script: {fileID: 11500000, guid: 8688f7708a36fde4b980653eb19ada59, type: 3}
+  m_Name: TimerDecision_1
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|DebugAction_0
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TimerDecision_1
       Guid:
-        Value: 117171784202019511
+        Value: 3717258919931521646
     Label: 
-    Message: "Beba \xE1gua"
+    TimeToTrueState:
+      Source: 1
+      Key: 
+      DefaultValue:
+        RawValue: 196608
+      FunctionRef:
+        Id:
+          Value: 0
 --- !u!114 &7871225523320819540
 MonoBehaviour:
   m_ObjectHideFlags: 0

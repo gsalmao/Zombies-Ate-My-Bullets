@@ -2425,11 +2425,11 @@ MonoBehaviour:
           RawValue: 0
       BoxExtents:
         X:
-          RawValue: 19660
+          RawValue: 20316
         Y:
           RawValue: 65536
         Z:
-          RawValue: 19660
+          RawValue: 20316
       RotationOffset:
         X:
           RawValue: 0
@@ -2596,6 +2596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnimation: {fileID: 8759251718317552918}
   headAim: {fileID: 7262001042433407709}
+  setHeadAim: 0
 --- !u!114 &1909133598390793571
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -45,7 +45,7 @@ MonoBehaviour:
     Acceleration:
       RawValue: 1310720
     StoppingDistance:
-      RawValue: 131072
+      RawValue: 16384
     AutoBraking: 0
     AutoBrakingDistance:
       RawValue: 32768

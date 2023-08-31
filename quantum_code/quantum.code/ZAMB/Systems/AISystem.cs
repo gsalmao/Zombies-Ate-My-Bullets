@@ -5,7 +5,13 @@
         public void OnAdded(Frame f, EntityRef entity, HFSMAgent* component)
         {
             HFSMRoot hfsmRoot = f.FindAsset<HFSMRoot>(component->Data.Root.Id);
+
+            var bbComponent = new AIBlackboardComponent();
+            var bbInitializer = f.FindAsset<AIBlackboardInitializer>(f.RuntimeConfig.AIBlackboardInitializer.Id);
+
+            AIBlackboardInitializer.InitializeBlackboard(f, &bbComponent, bbInitializer);
             HFSMManager.Init(f, entity, hfsmRoot);
+            f.Set(entity, bbComponent);
         }
 
         public override void Update(Frame f)
