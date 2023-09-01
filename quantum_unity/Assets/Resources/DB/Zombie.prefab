@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8072541789036257291}
   - component: {fileID: 8072541789036257288}
   - component: {fileID: 8439681673905948532}
+  - component: {fileID: 5787550961301841264}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -88,21 +89,21 @@ MonoBehaviour:
       CompoundShapes: []
       IsSetFromSourceCollider: 0
     Shape3D:
-      ShapeType: 2
+      ShapeType: 16
       SphereRadius:
         RawValue: 0
       PositionOffset:
         X:
           RawValue: 0
         Y:
-          RawValue: 65536
+          RawValue: 41943
         Z:
           RawValue: 0
       BoxExtents:
         X:
           RawValue: 16384
         Y:
-          RawValue: 65536
+          RawValue: 47185
         Z:
           RawValue: 16384
       RotationOffset:
@@ -114,7 +115,59 @@ MonoBehaviour:
           RawValue: 0
       UserTag: 0
       IsPersistent: 1
-      CompoundShapes: []
+      CompoundShapes:
+      - ShapeType: 2
+        SphereRadius:
+          RawValue: 0
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 45875
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 16384
+          Y:
+            RawValue: 45875
+          Z:
+            RawValue: 16384
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsSetFromSourceCollider: 0
+      - ShapeType: 1
+        SphereRadius:
+          RawValue: 16384
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 111411
+          Z:
+            RawValue: 6553
+        BoxExtents:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsSetFromSourceCollider: 0
       IsSetFromSourceCollider: 0
     Layer: 0
     CallbackFlags:
@@ -223,9 +276,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ZAMB.Debugging.BotDebugger, ZAMB.Debugging
-        m_MethodName: StartDebugging
+  OnEntityDestroyed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8439681673905948532}
+        m_TargetAssemblyTypeName: ZAMB.Entities.BotScripts.ZombieSetup, ZAMB.Entities.BotScripts
+        m_MethodName: OnDespawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -235,9 +291,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnEntityDestroyed:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &8072541789036257288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +338,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombieAnimation: {fileID: 8289596860982399979}
+  despawnVFX: {fileID: 8628453209491234990, guid: f40ca1ae825547845a7104c39193d742,
+    type: 3}
+--- !u!114 &5787550961301841264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8072541789036257289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f1cfe4de698164da5a5995457bca79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prototype:
+    InitialValue:
+      RawValue: 655360
+    MaxValue:
+      RawValue: 655360
+    CurrentValue:
+      RawValue: 0
+    IsDead:
+      Value: 0
+    CanSelfHeal:
+      Value: 0
+    StartHealingTime:
+      RawValue: 0
+    NextHealTime:
+      RawValue: 0
 --- !u!1001 &2974324632126157280
 PrefabInstance:
   m_ObjectHideFlags: 0

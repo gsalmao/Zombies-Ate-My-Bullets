@@ -41,17 +41,32 @@ MonoBehaviour:
         Id:
           Value: 5
       ResourcePath: DB/Configs/SimulationConfig
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|BotDespawn_4
+      AssetRef:
+        Id:
+          Value: 673905878884573978
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TargetAtRangeDecision_0
+      AssetRef:
+        Id:
+          Value: 729519156226187836
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|Despawn_4
+      AssetRef:
+        Id:
+          Value: 1066777021359406976
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
     - Path: Resources/DB/Map1_mesh
       AssetRef:
         Id:
           Value: 1090595483060781529
       ResourcePath: DB/Map1_mesh
-    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|FindClosestPlayerState_1
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|FindClosestPlayerState_0
       AssetRef:
         Id:
           Value: 1139968165541635246
       ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
-    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|FindClosestPlayer_1
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|FindClosestPlayer_0
       AssetRef:
         Id:
           Value: 1145229973428987411
@@ -61,7 +76,12 @@ MonoBehaviour:
         Id:
           Value: 1242700602406276456
       ResourcePath: DB/Player_Quantum
-    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|Follow_0
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|BotAttack_2
+      AssetRef:
+        Id:
+          Value: 1277317011956796034
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|FollowState_1
       AssetRef:
         Id:
           Value: 1414648971799129923
@@ -71,6 +91,11 @@ MonoBehaviour:
         Id:
           Value: 1474362596521399077
       ResourcePath: DB/Zombie
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|DeathState_3
+      AssetRef:
+        Id:
+          Value: 1528914416817356965
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
     - Path: Resources/DB/Map1
       AssetRef:
         Id:
@@ -86,10 +111,30 @@ MonoBehaviour:
         Id:
           Value: 2101512186209535400
       ResourcePath: DB/Map1_Navmesh_data
-    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TrueDecision_0
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|AttackState_2
+      AssetRef:
+        Id:
+          Value: 2434218914057583575
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TrueDecision_4
       AssetRef:
         Id:
           Value: 2577754747413278243
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|CheckDeathDecision_1
+      AssetRef:
+        Id:
+          Value: 2616453604662897133
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
+    - Path: Resources/DB/Bomb|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 2688952334333068945
+      ResourcePath: DB/Bomb
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TimerDecision_5
+      AssetRef:
+        Id:
+          Value: 2771891061877518493
       ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
     - Path: Resources/DB/Player_Quantum|EntityView
       AssetRef:
@@ -106,17 +151,22 @@ MonoBehaviour:
         Id:
           Value: 3110134905061702426
       ResourcePath: DB/CircuitExport/Blackboard_Assets/ZombieFSMBlackboardInitializer
-    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|UpdateTargetPosition_0
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|UpdateTargetPosition_1
       AssetRef:
         Id:
           Value: 3141307847807612833
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TimerDecision_3
+      AssetRef:
+        Id:
+          Value: 3297998577919473197
       ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
     - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM
       AssetRef:
         Id:
           Value: 3467821135930562146
       ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM
-    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TimerDecision_1
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TimerDecision_2
       AssetRef:
         Id:
           Value: 3717258919931521646
@@ -131,3 +181,13 @@ MonoBehaviour:
         Id:
           Value: 4319711701057195675
       ResourcePath: DB/NestedAssetType
+    - Path: Resources/DB/Bomb|EntityView
+      AssetRef:
+        Id:
+          Value: 4449283731845185611
+      ResourcePath: DB/Bomb
+    - Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|BotDeath_3
+      AssetRef:
+        Id:
+          Value: 4574436725634347674
+      ResourcePath: DB/CircuitExport/HFSM_Assets/ZombieFSM

@@ -23,9 +23,18 @@ namespace ZAMB.Entities.BotScripts
             enabled = true;
         }
 
-        private void OnEnable() => _walkTrigger.Subscribe(SetWalking);
-        private void OnDisable() => _walkTrigger.Unsubscribe(SetWalking);
+        private void OnEnable()
+        {
+            _walkTrigger.Subscribe(SetWalking);
+            QuantumEvent.Subscribe<EventBotAttack>(this, AttackAnim);
+            QuantumEvent.Subscribe<EventBotDeath>(this, KillBot);
+        }
 
+        private void OnDisable()
+        {
+            _walkTrigger.Unsubscribe(SetWalking);
+            QuantumEvent.UnsubscribeListener(this);
+        }
 
         private void Update()
         {
@@ -34,5 +43,18 @@ namespace ZAMB.Entities.BotScripts
         }
 
         private void SetWalking(bool value) => animator.SetBool(Walking, value);
+        private void AttackAnim(EventBotAttack e)
+        {
+            if(e.entityRef == _entityRef)
+                animator.SetTrigger(Attack);
+        }
+        private void KillBot(EventBotDeath e)
+        {
+            if(e.entityRef == _entityRef)
+            {
+                enabled = false;
+                animator.SetTrigger(Death);
+            }
+        }
     }
 }

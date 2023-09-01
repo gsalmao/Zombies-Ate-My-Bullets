@@ -8,7 +8,9 @@
 
             var bbComponent = new AIBlackboardComponent();
             var bbInitializer = f.FindAsset<AIBlackboardInitializer>(f.RuntimeConfig.AIBlackboardInitializer.Id);
-
+#if DEBUG
+            BotSDKDebuggerSystem.AddToDebugger(entity);
+#endif
             AIBlackboardInitializer.InitializeBlackboard(f, &bbComponent, bbInitializer);
             HFSMManager.Init(f, entity, hfsmRoot);
             f.Set(entity, bbComponent);

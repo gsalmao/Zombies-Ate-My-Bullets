@@ -65,10 +65,13 @@ namespace Quantum.Editor {
       public Quantum.UTRoot[] UTRoot = {};
       public Quantum.AIBlackboard[] AIBlackboard = {};
       public Quantum.AIBlackboardInitializer[] AIBlackboardInitializer = {};
+      public Quantum.BotDeath[] BotDeath = {};
+      public Quantum.BotDespawn[] BotDespawn = {};
       public Quantum.DebugAction[] DebugAction = {};
-      public Quantum.IdleAction[] IdleAction = {};
       public Quantum.IncreaseBlackboardInt[] IncreaseBlackboardInt = {};
       public Quantum.SetBlackboardInt[] SetBlackboardInt = {};
+      public Quantum.CheckDeathDecision[] CheckDeathDecision = {};
+      public Quantum.TargetAtRangeDecision[] TargetAtRangeDecision = {};
       public Quantum.CheckBlackboardInt[] CheckBlackboardInt = {};
       public Quantum.TimerDecision[] TimerDecision = {};
       public Quantum.TrueDecision[] TrueDecision = {};
@@ -78,6 +81,7 @@ namespace Quantum.Editor {
       public Quantum.SimulationConfig[] SimulationConfig = {};
       public Quantum.DecreaseTimer[] DecreaseTimer = {};
       public Quantum.FindClosestPlayer[] FindClosestPlayer = {};
+      public Quantum.BotAttack[] BotAttack = {};
       public Quantum.SetBlackboardFP[] SetBlackboardFP = {};
       public Quantum.UpdateTargetPosition[] UpdateTargetPosition = {};
       public Quantum.BinaryData[] BinaryData = {};

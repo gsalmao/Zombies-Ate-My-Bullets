@@ -1,0 +1,1 @@
+﻿signal OnCharacterDie(entity_ref targetCharacter, entity_ref sourceCharacter);

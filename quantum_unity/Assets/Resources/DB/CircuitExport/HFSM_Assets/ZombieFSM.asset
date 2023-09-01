@@ -10,16 +10,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5208639a4616a624daf5935962e3b1eb, type: 3}
-  m_Name: FindClosestPlayer_1
+  m_Name: FindClosestPlayer_0
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|FindClosestPlayer_1
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|FindClosestPlayer_0
       Guid:
         Value: 1145229973428987411
     Label: 
     targetKey:
       Key: Target
+--- !u!114 &-6868852754725087698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71b1eed636c5b342a2ddf289ce52656, type: 3}
+  m_Name: CheckDeathDecision_1
+  m_EditorClassIdentifier: 
+  Settings:
+    Identifier:
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|CheckDeathDecision_1
+      Guid:
+        Value: 2616453604662897133
+    Label: 
 --- !u!114 &-5464068065066692265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,11 +48,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c19d26b77ff7c3044ad7b6372e67c1f0, type: 3}
-  m_Name: UpdateTargetPosition_0
+  m_Name: UpdateTargetPosition_1
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|UpdateTargetPosition_0
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|UpdateTargetPosition_1
       Guid:
         Value: 3141307847807612833
     Label: 
@@ -50,11 +68,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18ff7bf909815f04187eb82fa0af10e2, type: 3}
-  m_Name: FindClosestPlayerState_1
+  m_Name: FindClosestPlayerState_0
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|FindClosestPlayerState_1
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|FindClosestPlayerState_0
       Guid:
         Value: 1139968165541635246
     Label: FindClosestPlayerState
@@ -64,6 +82,28 @@ MonoBehaviour:
     - Id:
         Value: 1145229973428987411
     Transitions:
+    - Id: 5bad13ba-a4e6-4ddc-8f0e-08bf345eb152
+      EventKey: 0
+      DecisionLink:
+        Id:
+          Value: 729519156226187836
+      StateLink:
+        Id:
+          Value: 2434218914057583575
+      TransitionSetLink:
+        Id:
+          Value: 0
+    - Id: 4a71b6f9-3cba-495a-b154-218f152f7155
+      EventKey: 0
+      DecisionLink:
+        Id:
+          Value: 2616453604662897133
+      StateLink:
+        Id:
+          Value: 1528914416817356965
+      TransitionSetLink:
+        Id:
+          Value: 0
     - Id: 556f72ff-5993-4c4c-a015-83b31dd3efcc
       EventKey: 0
       DecisionLink:
@@ -90,20 +130,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18ff7bf909815f04187eb82fa0af10e2, type: 3}
-  m_Name: Follow_0
+  m_Name: FollowState_1
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|Follow_0
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|FollowState_1
       Guid:
         Value: 1414648971799129923
-    Label: Follow
+    Label: FollowState
     OnUpdateLinks:
     - Id:
         Value: 3141307847807612833
     OnEnterLinks: []
     OnExitLinks: []
     Transitions:
+    - Id: 5bad13ba-a4e6-4ddc-8f0e-08bf345eb152
+      EventKey: 0
+      DecisionLink:
+        Id:
+          Value: 729519156226187836
+      StateLink:
+        Id:
+          Value: 2434218914057583575
+      TransitionSetLink:
+        Id:
+          Value: 0
+    - Id: 4a71b6f9-3cba-495a-b154-218f152f7155
+      EventKey: 0
+      DecisionLink:
+        Id:
+          Value: 2616453604662897133
+      StateLink:
+        Id:
+          Value: 1528914416817356965
+      TransitionSetLink:
+        Id:
+          Value: 0
     - Id: 600ebbc0-3d77-4303-ac63-5a77b81f4c1e
       EventKey: 0
       DecisionLink:
@@ -120,6 +182,28 @@ MonoBehaviour:
       Id:
         Value: 0
     Level: 0
+--- !u!114 &-442538735647138843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174bb4db990823d4990cfd75b86555e5, type: 3}
+  m_Name: TargetAtRangeDecision_0
+  m_EditorClassIdentifier: 
+  Settings:
+    Identifier:
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TargetAtRangeDecision_0
+      Guid:
+        Value: 729519156226187836
+    Label: 
+    targetKey:
+      Key: Target
+    distance:
+      RawValue: 45875
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +227,64 @@ MonoBehaviour:
         Value: 1139968165541635246
     - Id:
         Value: 1414648971799129923
+    - Id:
+        Value: 2434218914057583575
+    - Id:
+        Value: 1528914416817356965
+    - Id:
+        Value: 1066777021359406976
     EventsNames: []
+--- !u!114 &280255054661162963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ff7bf909815f04187eb82fa0af10e2, type: 3}
+  m_Name: AttackState_2
+  m_EditorClassIdentifier: 
+  Settings:
+    Identifier:
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|AttackState_2
+      Guid:
+        Value: 2434218914057583575
+    Label: AttackState
+    OnUpdateLinks: []
+    OnEnterLinks:
+    - Id:
+        Value: 1277317011956796034
+    OnExitLinks: []
+    Transitions:
+    - Id: 4a71b6f9-3cba-495a-b154-218f152f7155
+      EventKey: 0
+      DecisionLink:
+        Id:
+          Value: 2616453604662897133
+      StateLink:
+        Id:
+          Value: 1528914416817356965
+      TransitionSetLink:
+        Id:
+          Value: 0
+    - Id: d638bffd-68e6-4dab-9e56-47df92d9dfef
+      EventKey: 0
+      DecisionLink:
+        Id:
+          Value: 3297998577919473197
+      StateLink:
+        Id:
+          Value: 1139968165541635246
+      TransitionSetLink:
+        Id:
+          Value: 0
+    ChildrenLinks: []
+    ParentLink:
+      Id:
+        Value: 0
+    Level: 0
 --- !u!114 &1627903040293783291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,11 +295,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8688f7708a36fde4b980653eb19ada59, type: 3}
-  m_Name: TimerDecision_1
+  m_Name: TimerDecision_2
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TimerDecision_1
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TimerDecision_2
       Guid:
         Value: 3717258919931521646
     Label: 
@@ -170,6 +311,129 @@ MonoBehaviour:
       FunctionRef:
         Id:
           Value: 0
+--- !u!114 &1902739139204073900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ac7aa55a29b347b926831f2d4f171, type: 3}
+  m_Name: BotDeath_3
+  m_EditorClassIdentifier: 
+  Settings:
+    Identifier:
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|BotDeath_3
+      Guid:
+        Value: 4574436725634347674
+    Label: 
+--- !u!114 &3415152412728986926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18b63c2245187d48bd7897278a0fc2f, type: 3}
+  m_Name: BotDespawn_4
+  m_EditorClassIdentifier: 
+  Settings:
+    Identifier:
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|BotDespawn_4
+      Guid:
+        Value: 673905878884573978
+    Label: 
+--- !u!114 &4557655971610273228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7106e99ffb2afbf4aa3fe17bd49e6330, type: 3}
+  m_Name: BotAttack_2
+  m_EditorClassIdentifier: 
+  Settings:
+    Identifier:
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|BotAttack_2
+      Guid:
+        Value: 1277317011956796034
+    Label: 
+    hitboxExtents:
+      X:
+        RawValue: 4096
+      Y:
+        RawValue: 32768
+      Z:
+        RawValue: 4096
+    hitboxOffset:
+      X:
+        RawValue: 0
+      Y:
+        RawValue: 52428
+      Z:
+        RawValue: 32768
+--- !u!114 &4749545455472236112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8688f7708a36fde4b980653eb19ada59, type: 3}
+  m_Name: TimerDecision_5
+  m_EditorClassIdentifier: 
+  Settings:
+    Identifier:
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TimerDecision_5
+      Guid:
+        Value: 2771891061877518493
+    Label: 
+    TimeToTrueState:
+      Source: 1
+      Key: 
+      DefaultValue:
+        RawValue: 196608
+      FunctionRef:
+        Id:
+          Value: 0
+--- !u!114 &7231931024687270635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ff7bf909815f04187eb82fa0af10e2, type: 3}
+  m_Name: Despawn_4
+  m_EditorClassIdentifier: 
+  Settings:
+    Identifier:
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|Despawn_4
+      Guid:
+        Value: 1066777021359406976
+    Label: Despawn
+    OnUpdateLinks: []
+    OnEnterLinks:
+    - Id:
+        Value: 673905878884573978
+    OnExitLinks: []
+    Transitions: []
+    ChildrenLinks: []
+    ParentLink:
+      Id:
+        Value: 0
+    Level: 0
 --- !u!114 &7871225523320819540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,11 +444,77 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14538bae6ccb87a41b3cc7da632ecb0e, type: 3}
-  m_Name: TrueDecision_0
+  m_Name: TrueDecision_4
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TrueDecision_0
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TrueDecision_4
       Guid:
         Value: 2577754747413278243
     Label: 
+--- !u!114 &9116957832039402046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8688f7708a36fde4b980653eb19ada59, type: 3}
+  m_Name: TimerDecision_3
+  m_EditorClassIdentifier: 
+  Settings:
+    Identifier:
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|TimerDecision_3
+      Guid:
+        Value: 3297998577919473197
+    Label: 
+    TimeToTrueState:
+      Source: 1
+      Key: 
+      DefaultValue:
+        RawValue: 78643
+      FunctionRef:
+        Id:
+          Value: 0
+--- !u!114 &9184666544809253303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ff7bf909815f04187eb82fa0af10e2, type: 3}
+  m_Name: DeathState_3
+  m_EditorClassIdentifier: 
+  Settings:
+    Identifier:
+      Path: Resources/DB/CircuitExport/HFSM_Assets/ZombieFSM|DeathState_3
+      Guid:
+        Value: 1528914416817356965
+    Label: DeathState
+    OnUpdateLinks: []
+    OnEnterLinks:
+    - Id:
+        Value: 4574436725634347674
+    OnExitLinks: []
+    Transitions:
+    - Id: 0c493a70-7586-4fcf-a017-305d2077ba4d
+      EventKey: 0
+      DecisionLink:
+        Id:
+          Value: 2771891061877518493
+      StateLink:
+        Id:
+          Value: 1066777021359406976
+      TransitionSetLink:
+        Id:
+          Value: 0
+    ChildrenLinks: []
+    ParentLink:
+      Id:
+        Value: 0
+    Level: 0

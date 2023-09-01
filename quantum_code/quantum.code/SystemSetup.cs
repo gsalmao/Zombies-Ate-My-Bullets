@@ -25,9 +25,11 @@ namespace Quantum {
         new PlayerAimingSystem(),
         
         //Bot SDK
+        new HealthSystem(),
+        new BombSystem(),
         new AISystem(),
 #if DEBUG
-          new BotSDKDebuggerSystem()
+        new BotSDKDebuggerSystem()
 #endif
       };
     }

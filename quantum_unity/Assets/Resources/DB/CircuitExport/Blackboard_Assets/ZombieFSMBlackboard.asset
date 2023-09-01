@@ -21,3 +21,6 @@ MonoBehaviour:
     - Type: 6
       Key:
         Key: Target
+    - Type: 2
+      Key:
+        Key: NewBlackboard Variable

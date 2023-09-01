@@ -1,0 +1,1 @@
+﻿event BotAttack { EntityRef entityRef; }
